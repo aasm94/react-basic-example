@@ -6,9 +6,20 @@ import Footer from './components/footer/Footer';
 import { Fragment } from 'react';
 
 function App() {
+
+  let objHeader = {
+    title: 'My First Bootstrap 5 Page dynamic title from object',
+    description: 'Resize this responsive page to see the effect!'
+  }
+
+  const date = new Date().getFullYear();
+
   return (
     <Fragment>
-      <Header />
+      <Header 
+        title={objHeader.title} 
+        description={objHeader.description} 
+      />
       <Nav />
 
       <div className="container mt-5">
@@ -17,8 +28,8 @@ function App() {
           <Container />
         </div>
       </div>
-      
-      <Footer />
+
+      <Footer date={date} />
     </Fragment>
     
   );
